@@ -91,7 +91,7 @@ set background=dark
 colorscheme gruvbox
 
 " 保存時に自動的に末尾のスペースを削除
-" autocmd BufWritePre * :FixWhitespace
+autocmd BufWritePre * :FixWhitespace
 
 " 現在行番号のハイライト
 hi clear CursorLine
@@ -137,7 +137,7 @@ set ttimeoutlen=50
 let g:netrw_list_hide= '.*\.swp$'
 
 " airline theme
-let g:airline_theme='monochrome'
+let g:airline_theme='papercolor'
 
 " {{{ neocomplete
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
@@ -232,6 +232,10 @@ nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 
 " Go in text replace operation
 nnoremap <C-h> :%s/
+
+" Open another file
+nnoremap <C-o> :e.<CR>
+nnoremap <C-w> :bd<CR>
 
 " Save file
 nnoremap <Leader>w :w<CR>
